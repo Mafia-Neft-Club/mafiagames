@@ -933,8 +933,8 @@
                         selectedPoints: Array(10).fill("0"),
                         firstKilledGuessPointsOptions: [
                             { value: 0, label: "0" },
-                            { value: 0.25, label: "0.25" },
-                            { value: 0.5, label: "0.5" },
+                            { value: 0.2, label: "0.2" },
+                            { value: 0.4, label: "0.4" },
                         ],
                         winGameOptions: [
                             { value: !0, label: "Мир" },
@@ -1158,3 +1158,4 @@
     },
 });
 //# sourceMappingURL=app.bf291199.js.map
+
