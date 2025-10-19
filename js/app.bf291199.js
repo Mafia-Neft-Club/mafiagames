@@ -230,6 +230,60 @@
                                                     1
                                                 ),
                                                 l("div", { staticClass: "md-layout-item" }, [l("md-button", { staticClass: "md-raised", on: { click: e.newMonth } }, [e._v("Новый месяц")])], 1),
+                                            ]),                                
+                                            l("div", { staticClass: "md-layout" }, [
+                                                l(
+                                                    "div",
+                                                    { staticClass: "md-layout-item md-size-33" },
+                                                    [
+                                                        l(
+                                                            "v-menu",
+                                                            {
+                                                                attrs: { "close-on-content-click": !1, "nudge-right": 40, transition: "scale-transition", "offset-y": "", "min-width": "290px" },
+                                                                scopedSlots: e._u([
+                                                                    {
+                                                                        key: "activator",
+                                                                        fn: function (t) {
+                                                                            var s = t.on;
+                                                                            return [
+                                                                                l(
+                                                                                    "v-text-field",
+                                                                                    e._g(
+                                                                                        {
+                                                                                            attrs: { label: "Дата обновления", readonly: "" },
+                                                                                            model: {
+                                                                                                value: e.databaseSettings.dateUpdate,
+                                                                                                callback: function (t) {
+                                                                                                    e.$set(e.databaseSettings, "dateUpdate", t);
+                                                                                                },
+                                                                                                expression: "databaseSettings.dateUpdate",
+                                                                                            },
+                                                                                        },
+                                                                                        s
+                                                                                    )
+                                                                                ),
+                                                                            ];
+                                                                        },
+                                                                    },
+                                                                ]),
+                                                            },
+                                                            [
+                                                                l("v-date-picker", {
+                                                                    attrs: { "no-title": "", locale: "ru" },
+                                                                    model: {
+                                                                        value: e.databaseSettings.dateUpdate,
+                                                                        callback: function (t) {
+                                                                            e.$set(e.databaseSettings, "dateUpdate", t);
+                                                                        },
+                                                                        expression: "databaseSettings.dateUpdate",
+                                                                    },
+                                                                }),
+                                                            ],
+                                                            1
+                                                        ),
+                                                    ],
+                                                    1
+                                                ),
                                             ]),
                                         ],
                                         1
@@ -867,19 +921,6 @@
                                     { value: "sherif", text: "Шер" },
                                 ],
                                 selectPointOptions: [
-                                    { value: "0.1", text: "0.1" },
-{ value: "0.2", text: "0.2" },
-{ value: "0.3", text: "0.3" },
-{ value: "0.4", text: "0.4" },
-{ value: "0.5", text: "0.5" },
-{ value: "0.6", text: "0.6" },
-{ value: "0.7", text: "0.7" },
-{ value: "0.8", text: "0.8" },
-{ value: "0.9", text: "0.9" },
-{ value: "1", text: "1" },
-{ value: "1.1", text: "1.1" },
-{ value: "1.2", text: "1.2" },                                    
-                                    { value: "0", text: "0" },
                                     { value: "-0.1", text: "-0.1" },
 { value: "-0.2", text: "-0.2" },
 { value: "-0.3", text: "-0.3" },
@@ -891,7 +932,20 @@
 { value: "-0.9", text: "-0.9" },
 { value: "-1", text: "-1" },
 { value: "-1.1", text: "-1.1" },
-{ value: "-1.2", text: "-1.2" },
+{ value: "-1.2", text: "-1.2" },                                    
+                                    { value: "0", text: "0" },
+                                    { value: "0.1", text: "0.1" },
+{ value: "0.2", text: "0.2" },
+{ value: "0.3", text: "0.3" },
+{ value: "0.4", text: "0.4" },
+{ value: "0.5", text: "0.5" },
+{ value: "0.6", text: "0.6" },
+{ value: "0.7", text: "0.7" },
+{ value: "0.8", text: "0.8" },
+{ value: "0.9", text: "0.9" },
+{ value: "1", text: "1" },
+{ value: "1.1", text: "1.1" },
+{ value: "1.2", text: "1.2" },
                                     
                                 ],
                             };
@@ -940,7 +994,7 @@
                             { value: !0, label: "Мир" },
                             { value: !1, label: "Мафия" },
                         ],
-                        databaseSettings: { gamesMonth: "", maxPlayerId: 0, maxGameId: 0 },
+                        databaseSettings: { gamesMonth: "", maxPlayerId: 0, maxGameId: 0, dateUpdate: "" },
                         players: [],
                         games: [],
                     };
@@ -1158,5 +1212,3 @@
     },
 });
 //# sourceMappingURL=app.bf291199.js.map
-
-
